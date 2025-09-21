@@ -1,0 +1,170 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling with emoji logo */
+header {
+  background-color: #ffe680;
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Emoji logo before header title */
+header::before {
+  content: "🌟";
+  font-size: 2.5em;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Subtitle paragraph */
+header p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Main container for routine cards */
+.routines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Routine card styles */
+.routine-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  background-color: #fff;
+  border-left: 12px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  font-size: 1.3em;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Card hover effect */
+.routine-card:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/* Distinct border colors per routine */
+
+/* Study Mode */
+.study {
+  border-left-color: #3498db; /* blue */
+}
+
+/* Chill Day */
+.relax {
+  border-left-color: #9b59b6; /* purple */
+}
+
+/* Active Day */
+.active {
+  border-left-color: #2ecc71; /* green */
+}
+
+/* Weekend Fun */
+.fun {
+  border-left-color: #e74c3c; /* red */
+}
+
+/* Digital Detox */
+.detox {
+  border-left-color: #7f8c8d; /* gray */
+}
+
+/* Main content area for routine pages */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px 40px;
+  color: #444;
+}
+
+/* Headings inside main */
+main h2 {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/* Lists styling */
+main ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+main ul li {
+  padding: 8px 0;
+  font-size: 1.15em;
+  border-bottom: 1px solid #eee;
+}
+
+/* Back to homepage link */
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+  border-top: 1px solid #ddd;
+  color: #666;
+}
+
+/* Responsive text scaling for smaller screens */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .routine-card {
+    height: 140px;
+    font-size: 1.1em;
+  }
+
+  main ul li {
+    font-size: 1em;
+  }
+}
